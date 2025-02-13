@@ -1,0 +1,5 @@
+graft trame_alerts/core/module/serve
+prune examples
+prune tests
+prune vue-components
+prune .github
