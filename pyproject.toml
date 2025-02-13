@@ -34,6 +34,9 @@ dev = [
 quasar = [
     "trame_quasar",
 ]
+vuetify = [
+    "trame_vuetify",
+]
 
 [build-system]
 requires = ['setuptools', 'wheel']

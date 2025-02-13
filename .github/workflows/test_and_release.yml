@@ -86,6 +86,12 @@ jobs:
           npm ci
           npm run build
 
+      - name: Build vuetify Vue Components
+        run: |
+          cd vue-components/vuetify
+          npm ci
+          npm run build
+
   release:
     needs: [
       pre-commit,
@@ -118,6 +124,12 @@ jobs:
       - name: Build quasar Vue Components
         run: |
           cd vue-components/quasar
+          npm ci
+          npm run build
+
+      - name: Build vuetify Vue Components
+        run: |
+          cd vue-components/vuetify
           npm ci
           npm run build
 
