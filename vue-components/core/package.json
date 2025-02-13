@@ -1,0 +1,50 @@
+{
+  "name": "vue-trame_alerts",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./dist/trame_alerts.umd.js",
+  "unpkg": "./dist/trame_alerts.umd.js",
+  "module": "./dist/trame_alerts.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/trame_alerts.mjs",
+      "require": "./dist/trame_alerts.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite build --emptyOutDir --watch ",
+    "build": "run-p type-check build-only",
+    "build-only": "vite build --emptyOutDir",
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.cjs,.mjs --fix --ignore-path .gitignore --ignore-pattern public",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@tsconfig/node18": "^18.2.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "semantic-release": "19.0.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vue": "^3.0.0",
+    "vue-tsc": "^2.2.0"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ]
+}
