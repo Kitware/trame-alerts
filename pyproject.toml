@@ -31,6 +31,9 @@ dev = [
     "pytest",
     "codespell",
 ]
+quasar = [
+    "trame_quasar",
+]
 
 [build-system]
 requires = ['setuptools', 'wheel']
