@@ -116,20 +116,20 @@ jobs:
           node-version: 18
 
       - name: Build core Vue Components
+        working-directory: vue-components/core
         run: |
-          cd vue-components/core
           npm ci
           npm run build
 
       - name: Build quasar Vue Components
+        working-directory: vue-components/quasar
         run: |
-          cd vue-components/quasar
           npm ci
           npm run build
 
       - name: Build vuetify Vue Components
+        working-directory: vue-components/vuetify
         run: |
-          cd vue-components/vuetify
           npm ci
           npm run build
 

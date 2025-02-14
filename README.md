@@ -1,10 +1,9 @@
 # trame-alerts
 
-A trame package to manage and display alerts
+A trame package to manage and display alerts/notification while being agnostic of the widget framework you want to use.
+This can be use to report errors and let the user know about the completions of tasks. 
 
-* Free software: Apache Software License
-
-![demo](demo.png)
+![demo](https://github.com/Kitware/trame-alerts/blob/main/demo.png)
 
 ## Installing
 Install `trame_alerts` using `pip`
@@ -31,7 +30,6 @@ from trame.widgets import html, alerts
 from trame.ui.html import DivLayout
 
 server = get_server(client_type="vue3")
-state, ctrl = server.state, server.controller
 
 with DivLayout(server) as layout:
     with alerts.AlertsProvider():
@@ -68,6 +66,7 @@ The following variables are be made available in JavaScript:
 
 
 ## Examples
+
 Refer to the [`examples`](examples/) folder for minimal complete applications that use the core library as well as the vuetify and quasar UI implementation.
 
 
@@ -123,4 +122,4 @@ Share your experience [with a testimonial](https://github.com/Kitware/trame/issu
 
 ## JavaScript dependency
 
-This package optionally depends on [`trame-vuetify`](https://github.com/Kitware/trame-vuetify) and [`trame-quasar`](https://github.com/Kitware/trame-quasar), which bundle `vuetify@3.7.6` and `quasar@2.12.4` respectively. If you would like us to upgrade any of those dependencies, [please reach out](https://www.kitware.com/trame/).
+This package optionally depends on [`trame-vuetify`](https://github.com/Kitware/trame-vuetify) and [`trame-quasar`](https://github.com/Kitware/trame-quasar), but does not bundle any specific external JavaScript library.

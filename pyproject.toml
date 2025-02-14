@@ -14,7 +14,7 @@ readme = "README.md"
 license = {text = "Apache Software License"}
 keywords = ["Python", "Interactive", "Web", "Application", "Framework"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Environment :: Web Environment",
     "License :: OSI Approved :: Apache Software License",
     "Natural Language :: English",

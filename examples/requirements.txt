@@ -1,2 +1,2 @@
 trame
-trame_alerts
+trame-alerts[vuetify,quasar]
