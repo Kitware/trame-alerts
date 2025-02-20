@@ -223,6 +223,22 @@ class AlertsService:
         with self.state:
             self.state_alerts = {}
 
+    def bind_controller(self, add=False, clear=False):
+        """Set/Add on the Controller the methods exposed by the AlertsService"""
+        ctrl_set_fn = self._server.controller.add if add else self._server.controller.set
+
+        for method in (
+            self.create_alert,
+            self.create_success_alert,
+            self.create_warning_alert,
+            self.create_error_alert,
+            self.create_info_alert,
+            self.dismiss_alert,
+            self.remove_alert,
+            self.clear_alerts,
+        ):
+            ctrl_set_fn(method.__name__, clear)(method)
+
 
 def get_alerts_service(
     server: Server,

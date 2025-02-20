@@ -5,6 +5,8 @@ import { useQuasar } from "quasar";
 
 import type { Alert } from "@/types";
 
+const MAX_ALERT_TEXT_LENGTH = 80;
+
 interface Props {
   alerts: Alert[];
 }
@@ -49,7 +51,10 @@ function updateAlerts(alerts: Alert[]) {
       // First time seeing this alert
       newDismissMap[alert.id] = $q.notify({
         message: alert.title,
-        caption: alert.text,
+        caption:
+          alert.text.length > MAX_ALERT_TEXT_LENGTH
+            ? alert.text.slice(0, MAX_ALERT_TEXT_LENGTH) + "..."
+            : alert.text,
         type: alertToNotifyType(alert),
         group: false,
         timeout: 0,

@@ -252,6 +252,10 @@ class AlertsProvider(HtmlElement):
         """Remove all the alerts from the state."""
         return self.alerts_service.clear_alerts
 
+    def bind_controller(self, add=False, clear=False):
+        """Set/Add on the Controller the methods exposed by the AlertsProvider"""
+        self.alerts_service.bind_controller(add, clear)
+
     def _create_alert(self, alert):
         self.create_alert(**alert)
 

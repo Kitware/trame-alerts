@@ -9,6 +9,9 @@ serve = {"__trame_alerts_quasar": serve_path}
 # List of JS files to load (usually from the serve path above)
 scripts = ["__trame_alerts_quasar/trame_alerts_quasar.umd.js"]
 
+# List of CSS files to load (usually from the serve path above)
+styles = ["__trame_alerts_quasar/trame_alerts_quasar.css"]
+
 # List of Vue plugins to install/load
 vue_use = ["trame_alerts_quasar"]
 
