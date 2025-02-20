@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { Alert } from "@/types";
 
+const MAX_ALERT_TEXT_LENGTH = 80;
+
 interface Props {
   alerts: Alert[];
 }
@@ -27,7 +29,11 @@ function onRemove(id: number) {
         model-value="true"
         :type="alert.type"
         :title="alert.title"
-        :text="alert.text"
+        :text="
+          alert.text.length > MAX_ALERT_TEXT_LENGTH
+            ? alert.text.slice(0, MAX_ALERT_TEXT_LENGTH) + '...'
+            : alert.text
+        "
         density="compact"
       >
         <template #close>

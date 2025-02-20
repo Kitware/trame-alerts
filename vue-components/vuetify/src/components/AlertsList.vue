@@ -26,10 +26,13 @@ function onRemove(id: number) {
       model-value="true"
       :type="alert.type"
       :title="alert.title"
-      :text="alert.text"
       density="compact"
       variant="tonal"
     >
+      <template #text>
+        <div class="alert-list-text">{{ alert.text }}</div>
+      </template>
+
       <template #close>
         <v-btn @click="onRemove(alert.id)"></v-btn>
       </template>
@@ -41,5 +44,9 @@ function onRemove(id: number) {
 .alert-list-container {
   display: grid;
   grid-gap: 0.25em;
+}
+
+.alert-list-text {
+  white-space: pre-wrap;
 }
 </style>
