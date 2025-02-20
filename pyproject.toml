@@ -1,6 +1,6 @@
 [project]
 name = "trame-alerts"
-version = "0.1.0"
+version = "0.2.0"
 description = "A trame package to manage and display alerts"
 authors = [
     {name = "Alessandro Genova"},
