@@ -64,7 +64,9 @@ function onRemove(id: number) {
 
         <q-item-section>
           <q-item-label lines="1">{{ alert.title }}</q-item-label>
-          <q-item-label caption>{{ alert.text }}</q-item-label>
+          <q-item-label caption class="alert-list-caption">
+            {{ alert.text }}
+          </q-item-label>
         </q-item-section>
 
         <q-item-section side>
@@ -80,3 +82,9 @@ function onRemove(id: number) {
     </template>
   </q-list>
 </template>
+
+<style>
+.alert-list-caption {
+  white-space: pre-wrap;
+}
+</style>
