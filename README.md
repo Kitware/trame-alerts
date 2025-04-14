@@ -112,7 +112,7 @@ pip install -e ".[dev,vuetify,quasar]"
 
 ## Community
 
-[Trame](https://kitware.github.io/trame) | [Discussions](https://github.com/Kitware/trame/discussions) | [Issues](https://github.com/Kitware/trame/issues) | [RoadMap](https://github.com/Kitware/trame/projects/1) | [Contact Us](https://www.kitware.com/contact-us/)
+[Trame](https://kitware.github.io/trame) | [Discussions](https://github.com/Kitware/trame/discussions) | [Issues](https://github.com/Kitware/trame/issues) | [Contact Us](https://www.kitware.com/contact-us/)
 
 
 ## Enjoying trame?
